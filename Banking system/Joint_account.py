@@ -7,7 +7,7 @@ class JointAccount(Account):
         self._joint_owners = joint_owners
     
     def deposit(self,amount:float) -> None:
-        if amount >= 0 and isinstance(amount,float) or isinstance(amount,int):
+        if amount >= 0 and isinstance(amount,float):
             self._balance += amount
         else:
             raise ValueError("Enter valid amount")
