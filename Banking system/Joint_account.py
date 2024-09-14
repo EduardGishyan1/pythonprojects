@@ -13,7 +13,7 @@ class JointAccount(Account):
             raise ValueError("Enter valid amount")
     
     def withdraw(self,amount:float) -> None:
-        if amount >= 0 and isinstance(amount,(float,int)):
+        if amount >= 0 and isinstance(amount,float):
             if self._balance >= amount:
                 self._balance -= amount
             else:
