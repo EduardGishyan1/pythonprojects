@@ -6,14 +6,14 @@ class SavingAccounts(Account):
         self._interest_rate = interest_rate
     
     def deposit(self,amount:float) -> None:
-        if amount >= 0 and isinstance(amount,float) or isinstance(amount,int):
+        if isinstance(amount,float) and amount >= 0:
             interest = self._interest_rate * amount / 100
             self._balance += amount - interest
         else:
             raise ValueError("Enter valid amount")
     
     def withdraw(self,amount:float) -> None:
-        if amount >= 0 and isinstance(amount,(float,int)):
+        if isinstance(amount,float) and amount >= 0:
             interest = self._interest_rate * amount / 100
             if self._balance >= amount + interest:
                 self._balance -= amount + interest
@@ -23,7 +23,7 @@ class SavingAccounts(Account):
             raise ValueError("Enter valid amount")
         
     def transfer(self, destination: Account, amount: float) -> None:
-        if isinstance(amount,(float,int)) and amount >= 0:
+        if isinstance(amount,float) and amount >= 0:
             interest = self._interest_rate * amount / 100
             if self._balance > amount + interest:
                 interest = amount * self._interest_rate / 100
