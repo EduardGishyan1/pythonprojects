@@ -31,7 +31,7 @@ def main():
      customer.view_accounts()
      customer.view_transcation_history()
 
-     transcation = Transcation(checking_account,joint_account,150.0,'without type',datetime.datetime(2024,9,14))
+     transcation = Transcation(checking_account,joint_account,150.0,'without type',datetime.datetime.now())
 
      transcation.log()
 
