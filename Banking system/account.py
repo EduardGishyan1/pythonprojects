@@ -22,15 +22,3 @@ class Account(ABC):
     @abstractmethod
     def get_account_type(self) -> str:
         ...
-
-    def set_acc_Number(self,number):
-        if isinstance(number,int) and number > 0:
-            self._account_number = number
-        else:
-            raise ValueError("Enter number")
-        
-    def set_balance(self,balance):
-        if isinstance(balance,float) or isinstance(balance,int):
-            self._balance = balance
-        else:
-            raise ValueError("Enter number")
