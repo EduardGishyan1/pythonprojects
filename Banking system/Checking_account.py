@@ -21,7 +21,7 @@ class CheckingAccount(Account):
             raise ValueError("Enter valid amount")
         
     def transfer(self, destination: Account, amount: float) -> None:
-        if amount >= 0 and isinstance(amount,float):
+        if isinstance(amount,float) and amount >= 0:
             if self._balance > amount:
                 self._balance -= amount
                 destination.deposit(amount)
