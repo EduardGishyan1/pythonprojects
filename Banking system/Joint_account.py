@@ -7,13 +7,13 @@ class JointAccount(Account):
         self._joint_owners = joint_owners
     
     def deposit(self,amount:float) -> None:
-        if amount >= 0 and isinstance(amount,float):
+        if isinstance(amount,float) and amount >= 0:
             self._balance += amount
         else:
             raise ValueError("Enter valid amount")
     
     def withdraw(self,amount:float) -> None:
-        if amount >= 0 and isinstance(amount,float):
+        if isinstance(amount,float) and amount >= 0:
             if self._balance >= amount:
                 self._balance -= amount
             else:
@@ -22,7 +22,7 @@ class JointAccount(Account):
             raise ValueError("Enter valid amount")
         
     def transfer(self, destination: Account, amount: float) -> None:
-        if amount >= 0 and isinstance(amount,float):
+        if isinstance(amount,float) and amount >= 0:
             if self._balance > amount:
                 self._balance -= amount
                 destination.deposit(amount)
