@@ -3,15 +3,7 @@ from customer import *
 from Joint_account import *
 from Savings_account import *
 from Transcation import *
-from Transcation_manager import TranscationManager
-
-
-class ConcreteTranscationManager(TranscationManager):
-    def log_transcation(self, transcation_type: str, amount: float) -> None:
-        self._transcation.append((transcation_type,amount))
-    def show_transcation_history(self) -> None:
-        for i in self._transcation:
-            print(i)
+from Transcation_manager import ConcreteTranscationManager
     
 def main():
     try:
