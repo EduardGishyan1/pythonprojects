@@ -12,7 +12,7 @@ class CheckingAccount(Account):
             raise ValueError("Enter valid amount")
     
     def withdraw(self,amount:float) -> None:
-        if isinstance(amount,float) and amount >= 0:
+        if isinstance(amount,float) and amount >= 0 and self._overdraft_limit >= amount:
             if self._balance >= amount:
                 self._balance -= amount
             else:
