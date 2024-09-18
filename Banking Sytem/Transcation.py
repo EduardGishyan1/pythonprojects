@@ -23,7 +23,7 @@ class Transcation:
             raise ValueError("Enter valid value")
     
     def setToAccount(self,to_account):
-        if to_account and isinstance(to_account,type):
+        if isinstance(to_account,type):
             self._to_account = to_account
         else:
             raise ValueError("Enter valid value")
@@ -35,7 +35,7 @@ class Transcation:
             raise ValueError("Enter valid value")
     
     def setTranscationType(self,transcation_type):
-        if transcation_type and isinstance(transcation_type,str):
+        if isinstance(transcation_type,str):
             self._transcation_type = transcation_type
         else:
             raise ValueError("Enter valid value")
