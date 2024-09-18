@@ -45,7 +45,7 @@ class JointAccount(Account):
         self._joint_owners.append(customer)
 
     def setJointOwners(self,joint_owners):
-        if isinstance(joint_owners,list) and joint_owners:
+        if isinstance(joint_owners,list):
             self.__joint_owners = joint_owners
         else:
             raise ValueError("Enter valid value")
