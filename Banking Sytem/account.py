@@ -33,7 +33,7 @@ class Account(ABC):
             raise ValueError("Enter valid value")
     
     def setAccountType(self,account_type):
-        if isinstance(account_type,str) and account_type:
+        if isinstance(account_type,str):
             self.__account_type = account_type
         else:
             raise ValueError("Enter valid value")
