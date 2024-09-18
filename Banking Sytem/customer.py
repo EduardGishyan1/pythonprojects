@@ -24,13 +24,13 @@ class Customer:
             print(f"Added account {type(history).__name__}")
     
     def setName(self,name):
-        if isinstance(name,str) and name:
+        if isinstance(name,str):
             self.__name = name
         else:
             raise ValueError("Enter valid value")
 
     def setContactInfo(self,contact_info):
-        if isinstance(contact_info,str) and contact_info:
+        if isinstance(contact_info,str):
             self.__contact_info = contact_info
         else:
             raise ValueError("Enter valid value")
