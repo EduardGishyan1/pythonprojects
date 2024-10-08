@@ -99,7 +99,3 @@ class User:
         self._posts.append(post)
         print(f"{self.username} created a post: {content}")
         return post
-    
-    def delete_comment(self,user):
-        self._comments.remove(self)
-        print("comment deleted")
