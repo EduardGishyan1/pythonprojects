@@ -1,4 +1,5 @@
 class Feed:
+    __slots__ = tuple()
     def __init__(self, user:"User"):
         self.user = user
         self.posts:list = []
