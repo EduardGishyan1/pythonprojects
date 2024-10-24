@@ -10,7 +10,7 @@ class Transcation:
 
 
     def __str__(self) -> str:
-        return f"Datetime {self.datetime} , Transcation type: {self.transcation_type}, credited: {self.credited}, debited: {self.debited}, amount: {self.amount}"
+        return f"Datetime {str(self.datetime)} , Transcation type: {self.transcation_type}, credited: {self.credited}, debited: {self.debited}, amount: {self.amount}"
     
     @property
     def debited(self):
