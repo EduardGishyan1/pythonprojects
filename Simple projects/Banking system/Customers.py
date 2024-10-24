@@ -1,5 +1,3 @@
-from Transcations import Transcation
-
 class Customer:
     def __init__(self,name,contact_information) -> None:
         self.name = name
