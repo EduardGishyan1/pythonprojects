@@ -1,7 +1,7 @@
 from datetime import datetime
 from abc import ABC,abstractmethod
 
-class Account:
+class Account(ABC):
     def __init__(self,account_number,balance=0) -> None:
         self.account_number = account_number
         self.balance = balance
